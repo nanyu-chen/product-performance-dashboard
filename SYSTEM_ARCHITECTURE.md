@@ -2,23 +2,23 @@
 
 ## Overview
 
-This document outlines the system architecture, design decisions, and implementation approach for the full-stack product performance dashboard. The system provides secure authentication and advanced data visualization capabilities specifically designed for product managers to analyze performance metrics using dual-axis charts.
+This document outlines the system architecture, design decisions, and implementation approach for the full-stack product performance dashboard. The system provides secure authentication and advanced data visualisation capabilities specifically designed for product managers to analyse performance metrics using dual-axis charts.
 
 ## System Requirements Analysis
 
 ### Primary Requirements
-1. **Full-stack data visualization application** with secure login system
-2. **Interactive dashboard** for product manager to analyze individual product performance
+1. **Full-stack data visualisation application** with secure login system
+2. **Interactive dashboard** for product manager to analyse individual product performance
 3. **Excel data processing** capability with client-side transformation
 4. **Dual-axis charts** showing inventory quantities and monetary values
-5. **Real-time data processing** with immediate visualization feedback
+5. **Real-time data processing** with immediate visualisation feedback
 
 ### Derived Requirements
 - User authentication and session management
 - Client-side Excel file processing capabilities
-- Responsive and intuitive user interface optimized for product managers
+- Responsive and intuitive user interface optimised for product managers
 - Real-time chart updates without server round-trips
-- Cross-browser compatibility and performance optimization
+- Cross-browser compatibility and performance optimisation
 
 ## System Architecture
 
@@ -28,7 +28,7 @@ This document outlines the system architecture, design decisions, and implementa
 - **Next.js 15** with App Router
 - **React 19** with TypeScript for type safety
 - **Tailwind CSS 4** for styling and responsive design
-- **Recharts 3.1** for advanced data visualization
+- **Recharts 3.1** for advanced data visualisation
 
 #### Backend
 - **Next.js API Routes** for serverless backend
@@ -38,7 +38,7 @@ This document outlines the system architecture, design decisions, and implementa
 
 #### Data Processing
 - **xlsx library** for Excel file parsing
-- **Custom transformation utilities** for data normalization
+- **Custom transformation utilities** for data normalisation
 - **Client-side processing** for real-time chart updates
 
 ### Architecture Diagram
@@ -67,7 +67,7 @@ User Login → API Route → Database Verification → JWT Generation → HttpOn
 
 ### 2. Data Processing Flow
 ```
-Excel Upload → Client-side Reading → Data Transformation → Chart Preparation → Real-time Visualization
+Excel Upload → Client-side Reading → Data Transformation → Chart Preparation → Real-time Visualisation
 ```
 
 ### 3. Dashboard Interaction Flow
@@ -92,15 +92,15 @@ Product Selection → Data Filtering → Chart Re-rendering → Statistics Calcu
    - Interactive legend with line visibility controls
    - Real-time statistics display
 
-3. **Data Visualization**
+3. **Data Visualisation**
    - Fixed 500px chart container for consistency
    - Adaptive legend layout (horizontal ≤6 products, vertical grid >6)
-   - Color-coded product lines with accessible palette
+   - Colour-coded product lines with accessible palette
    - Responsive tooltips and hover interactions
 
 #### State Management
 - **React Hooks** for local component state
-- **useMemo/useCallback** for performance optimization
+- **useMemo/useCallback** for performance optimisation
 - **Custom hooks** for data transformation logic
 
 ### Backend Architecture
@@ -172,8 +172,8 @@ interface TransformedData {
 - **Right Y-Axis**: Monetary values (currency formatting)
 - **X-Axis**: Time series (Day 1, Day 2, Day 3)
 
-#### Performance Optimizations
-- **Memoized calculations** for chart data preparation
+#### Performance Optimisations
+- **Memoised calculations** for chart data preparation
 - **Selective re-rendering** based on product selection
 - **Efficient data filtering** using Set operations
 
@@ -212,14 +212,14 @@ interface TransformedData {
 **Rationale**:
 - Different scale ranges (hundreds vs. dollars)
 - Clearer visual distinction between metric types
-- Product manager workflow optimization
+- Product manager workflow optimisation
 
 ### 4. Adaptive Legend Layout
 **Decision**: Horizontal ≤6 products, vertical grid >6 products
 **Rationale**:
 - Maintains chart readability with many products
 - Responsive design principles
-- User experience optimization
+- User experience optimisation
 
 ## Assumptions & Limitations
 
@@ -236,7 +236,7 @@ interface TransformedData {
 1. **File Size**: Large Excel files may impact browser performance
 2. **Concurrent Users**: No real-time collaboration features
 3. **Data Persistence**: Chart state not saved between sessions
-4. **Mobile Optimization**: Desktop-first responsive design
+4. **Mobile Optimisation**: Desktop-first responsive design
 
 #### Business Limitations
 1. **Single Tenant**: No multi-organization support
@@ -250,7 +250,7 @@ interface TransformedData {
 1. **Virtual Scrolling**: For large product lists
 2. **Data Pagination**: Server-side data chunking
 3. **Caching Strategy**: Redis for frequently accessed data
-4. **CDN Integration**: Static asset optimization
+4. **CDN Integration**: Static asset optimisation
 
 #### Feature Enhancements
 1. **Export Capabilities**: PDF/PNG chart export

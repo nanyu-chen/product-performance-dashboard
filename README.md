@@ -1,11 +1,15 @@
 # Product Performance Dashboard
 
-A full-stack data visualization application with secure authentication for product managers to analyze performance metrics with dual-axis charts.
+A full-stack data visualisation application with secure authentication for product managers to analyse performance metrics with dual-axis charts.
 
-## Features
+## 🎯 Live Demo
+
+**Repository**: [https://github.com/nanyu-chen/product-performance-dashboard](https://github.com/nanyu-chen/product-performance-dashboard)
+
+## ✨ Features
 
 - 🔐 **Secure Authentication**: JWT-based authentication with bcrypt password hashing
-- 📊 **Advanced Data Visualization**: Interactive dual-axis charts with inventory and monetary values
+- 📊 **Advanced Data Visualisation**: Interactive dual-axis charts with inventory and monetary values
 - 📄 **Excel File Processing**: Client-side Excel parsing with real-time transformation
 - 🎯 **Product Manager Focus**: Multi-product comparison with adaptive legend layouts
 - 📱 **Responsive Design**: Mobile-friendly interface with Tailwind CSS 4
@@ -38,14 +42,14 @@ A full-stack data visualization application with secure authentication for produ
 2. **Configure database** (if needed):
    ```bash
    # Update .env file with your PostgreSQL connection string
-   DATABASE_URL="postgresql://username:password@localhost:5432/database_name?schema=public"
+   DATABASE_URL="postgresql://nanyu@localhost:5432/dashboard_db?schema=public"
    ```
 
 3. **Access the application**:
    - Open [http://localhost:3000](http://localhost:3000)
    - Login with: `admin` / `admin123`
    - Upload your ProductData Excel file
-   - Analyze product performance with dual-axis charts!
+   - Analyse product performance with dual-axis charts!
 
 ## Core Features
 
@@ -57,11 +61,11 @@ A full-stack data visualization application with secure authentication for produ
 - **Adaptive Layout**: Horizontal legend (≤6 products), vertical grid (>6)
 - **Real-time Statistics**: Total revenue, inventory levels, growth metrics
 
-### 📊 **Data Visualization**
+### 📊 **Data Visualisation**
 - **Composed Charts**: Inventory quantities + procurement/sales amounts
 - **Fixed Chart Container**: Consistent 500px chart area
 - **Scrollable Product Selector**: Clean interface for product management
-- **Color-coded Lines**: Accessible color palette for multiple products
+- **Colour-coded Lines**: Accessible colour palette for multiple products
 - **Responsive Tooltips**: Detailed data on hover
 
 ### 🔧 **Data Processing**
@@ -87,3 +91,37 @@ The system automatically handles:
 - Multiple day columns (Day 1, Day 2, Day 3, etc.)
 - Cumulative inventory calculations
 - Data validation and error handling
+
+## 🚀 Deployment
+
+### Deploy to Vercel (todo)
+
+## 📱 Screenshots
+
+### Dashboard Overview
+![Dashboard with dual-axis charts showing inventory and monetary values]
+
+### Multi-Product Comparison  
+![Interactive product selection with adaptive legend layouts]
+
+### Excel Data Processing
+![Real-time Excel file upload and transformation]
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/) and [React](https://reactjs.org/)
+- Charts powered by [Recharts](https://recharts.org/)
+- Database integration with [Prisma](https://www.prisma.io/)
+- Styling with [Tailwind CSS](https://tailwindcss.com/)

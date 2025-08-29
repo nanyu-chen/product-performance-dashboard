@@ -2,7 +2,7 @@
 
 ## ✅ What's Been Built
 
-I've successfully created a comprehensive product manager dashboard with advanced data visualization capabilities:
+I've successfully created a comprehensive product manager dashboard with advanced data visualisation capabilities:
 
 ### 🔐 **Authentication System**
 - ✅ JWT-based authentication with bcrypt password hashing
@@ -20,10 +20,9 @@ I've successfully created a comprehensive product manager dashboard with advance
 
 ### 📄 **Excel Data Processing**
 - ✅ **Client-side Excel parsing** using xlsx library
-- ✅ **Currency string conversion** ("$13.72" → 13.72)
 - ✅ **Wide-to-long format transformation** for chart compatibility
 - ✅ **Cumulative inventory calculations** (Opening + Procurement - Sales)
-- ✅ **Real-time data transformation** with immediate visualization
+- ✅ **Real-time data transformation** with immediate visualisation
 
 ### 🗄️ **Database & Backend**
 - ✅ PostgreSQL database with Prisma ORM
@@ -101,7 +100,7 @@ dashboard-app/
 
 ### Frontend
 - ✅ Next.js 15 with App Router and TypeScript
-- ✅ React 19 with modern hooks and optimizations
+- ✅ React 19 with modern hooks and optimisations
 - ✅ Tailwind CSS 4 for responsive design
 - ✅ Recharts 3.1 with dual-axis composed charts
 - ✅ Client-side Excel processing with xlsx library
@@ -119,9 +118,8 @@ dashboard-app/
 - ✅ **Multi-product selection** - compare multiple products simultaneously
 - ✅ **Interactive legend** - click to toggle line visibility
 - ✅ **Adaptive layouts** - responsive legend based on product count
-- ✅ **Fixed chart container** - consistent 500px visualization area
+- ✅ **Fixed chart container** - consistent 500px visualisation area
 - ✅ **Real-time statistics** - revenue, inventory, growth calculations
-- ✅ **Currency parsing** - handles "$13.72" format automatically
 - ✅ **Cumulative calculations** - inventory tracking over time
 
 ## 📊 **Expected Excel Data Format**
@@ -133,7 +131,6 @@ Product B    | 200              | 75                       | $8.75              
 ```
 
 **Automatic Processing:**
-- ✅ Currency string parsing ("$13.72" → 13.72)
 - ✅ Wide-to-long format transformation
 - ✅ Cumulative inventory calculation (Opening + Procurement - Sales)
 - ✅ Multi-day data handling (Day 1, Day 2, Day 3, etc.)
@@ -147,7 +144,7 @@ The application is fully functional with advanced product manager features:
 3. ✅ **Excel processing** - client-side transformation pipeline
 4. ✅ **Product analysis** - multi-product comparison capabilities
 5. ✅ **Responsive design** - adaptive layouts and mobile support
-6. ✅ **Performance optimized** - real-time updates without server calls
+6. ✅ **Performance optimised** - real-time updates without server calls
 
 ## 🔧 **Configuration**
 
@@ -161,16 +158,16 @@ JWT_SECRET="your-super-secret-jwt-key-change-in-production"
 
 ### Architecture Benefits
 - **Client-side processing** - reduces server load, improves responsiveness
-- **Real-time visualization** - immediate feedback on data changes
+- **Real-time visualisation** - immediate feedback on data changes
 - **Modular design** - easy to extend and maintain
 - **Type safety** - full TypeScript implementation
-- **Performance optimized** - memoized calculations and efficient rendering
+- **Performance optimised** - memoised calculations and efficient rendering
 
 ### Production Features
 - **Security hardened** - JWT tokens, route protection, input validation
 - **Error handling** - comprehensive error boundaries and user feedback
 - **Responsive UI** - works on desktop, tablet, and mobile devices
-- **Accessibility** - proper color contrast and keyboard navigation
+- **Accessibility** - proper colour contrast and keyboard navigation
 - **Documentation** - comprehensive setup and usage guides
 
 **The dashboard is now ready for production deployment! 🚀**
