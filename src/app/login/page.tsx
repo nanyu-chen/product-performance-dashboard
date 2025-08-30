@@ -34,9 +34,9 @@ export default function LoginPage() {
         console.log('Login successful, redirecting to /product-dashboard')
         console.log('Router object:', router)
         
-        // Add a small delay to see the console message
+        // Use window.location.href for a full page navigation to ensure cookies are processed
         setTimeout(() => {
-          router.push('/product-dashboard')
+          window.location.href = '/product-dashboard'
         }, 1000)
       } else {
         console.error('Login failed:', data.error)
