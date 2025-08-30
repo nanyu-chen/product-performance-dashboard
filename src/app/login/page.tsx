@@ -17,6 +17,8 @@ export default function LoginPage() {
     setError('')
 
     try {
+      console.log('Attempting login with:', { username, password: '***' })
+      
       const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: {
@@ -26,13 +28,22 @@ export default function LoginPage() {
       })
 
       const data = await response.json()
+      console.log('Login response:', { status: response.status, data })
 
       if (response.ok) {
-        router.push('/product-dashboard')
+        console.log('Login successful, redirecting to /product-dashboard')
+        console.log('Router object:', router)
+        
+        // Add a small delay to see the console message
+        setTimeout(() => {
+          router.push('/product-dashboard')
+        }, 1000)
       } else {
+        console.error('Login failed:', data.error)
         setError(data.error || 'Login failed')
       }
     } catch (error) {
+      console.error('Network error during login:', error)
       setError('Network error. Please try again.')
     } finally {
       setLoading(false)
