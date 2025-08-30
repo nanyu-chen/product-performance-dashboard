@@ -1,37 +1,29 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { verifyToken } from './src/lib/auth'
+import { verifyTokenEdgeSync } from './src/lib/auth-edge'
 
 export function middleware(request: NextRequest) {
   const token = request.cookies.get('token')?.value
-  
-  console.log('🔵 Middleware - Path:', request.nextUrl.pathname)
-  console.log('🔵 Middleware - Token exists:', !!token)
 
   // Protect product-dashboard route
   if (request.nextUrl.pathname.startsWith('/product-dashboard')) {
-    console.log('🔵 Middleware - Protecting product-dashboard')
-    
     if (!token) {
-      console.log('❌ Middleware - No token, redirecting to login')
       return NextResponse.redirect(new URL('/login', request.url))
     }
-    
-    const tokenValid = verifyToken(token)
-    console.log('🔵 Middleware - Token valid:', !!tokenValid)
-    
+    const tokenValid = verifyTokenEdgeSync(token)
     if (!tokenValid) {
-      console.log('❌ Middleware - Invalid token, redirecting to login')
       return NextResponse.redirect(new URL('/login', request.url))
     }
-    
-    console.log('✅ Middleware - Token valid, allowing access')
+    return NextResponse.next()
   }
 
   // Redirect to product-dashboard if already logged in and trying to access login
-  if (request.nextUrl.pathname === '/login' && token && verifyToken(token)) {
-    console.log('🔵 Middleware - Already logged in, redirecting to dashboard')
-    return NextResponse.redirect(new URL('/product-dashboard', request.url))
+  if (request.nextUrl.pathname === '/login' && token) {
+    const tokenValid = verifyTokenEdgeSync(token)
+    if (tokenValid) {
+      return NextResponse.redirect(new URL('/product-dashboard', request.url))
+    }
+    return NextResponse.next()
   }
 
   // Redirect root to login
@@ -40,6 +32,7 @@ export function middleware(request: NextRequest) {
   }
 
   return NextResponse.next()
+}
 }
 
 export const config = {
