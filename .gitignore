@@ -42,20 +42,16 @@ next-env.d.ts
 
 /src/generated/prisma
 
-# Database backup files and migration scripts
+# Database files and backups
 *.sql
-backup.sql
-dashboard_db_backup.sql
-local_backup.sql
-supabase_migration.sql
-supabase_migration_clean.sql
 
 # Test and debug files
 debug-connection.js
-test-connection.js
-test-full-connection.js
-test-supabase-connection.js
+test-*.js
+
+# Deployment and cleanup files
+VERCEL_DEPLOYMENT.md
 cleanup.sh
 
-# Temporary documentation
-VERCEL_DEPLOYMENT.md
+# Migration files (contain sensitive data)
+*migration*.sql
