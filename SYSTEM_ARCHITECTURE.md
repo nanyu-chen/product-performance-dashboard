@@ -296,8 +296,23 @@ src/
 4. **Performance Tests**: Chart rendering and large data sets
 
 ### Deployment Pipeline
+
+#### Local Development
+- Run `./setup.sh` to install dependencies, migrate DB, and seed admin user
+- Start app with `npm run dev` (http://localhost:3000)
+- Optionally, use `dev.sh` to start a local Postgres DB with Docker
+
+#### Cloud Deployment (Vercel)
+- Set environment variables (`DATABASE_URL`, `JWT_SECRET`) in Vercel dashboard
+- Deploy via Vercel dashboard or CLI (`vercel --prod`)
+- App is live at your Vercel URL
+
+#### Environment Variables
+- All secrets and DB credentials are managed via `.env` (local) or Vercel dashboard (cloud)
+
+#### Pipeline Steps
 1. **Development**: Local development with hot reload
-2. **Staging**: Docker containerization for testing
+2. **Staging**: Docker containerization for testing (optional)
 3. **Production**: Vercel deployment with PostgreSQL
 4. **Monitoring**: Error tracking and performance metrics
 

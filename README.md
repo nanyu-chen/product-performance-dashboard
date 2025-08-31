@@ -32,24 +32,29 @@ A full-stack data visualisation application with secure authentication for produ
 
 ## Quick Start
 
+### Local Development
+
 1. **Clone and setup**:
    ```bash
+   git clone https://github.com/nanyu-chen/product-performance-dashboard.git
    cd dashboard-app
-   ./setup.sh        # Sets up everything
-   npm run dev       # Starts the application
+   ./setup.sh        # Installs dependencies, sets up DB, seeds admin user
+   npm run dev       # Starts the app at http://localhost:3000
    ```
 
 2. **Configure database** (if needed):
-   ```bash
-   # Update .env file with your PostgreSQL connection string
-   DATABASE_URL="postgresql://nanyu@localhost:5432/dashboard_db?schema=public"
-   ```
+   - Edit `.env` with your PostgreSQL connection string
+   - Example: `DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=public"`
 
 3. **Access the application**:
    - Open [http://localhost:3000](http://localhost:3000)
-   - Login with: `admin` / `admin123`
+   - Login: `admin` / `admin123`
    - Upload your ProductData Excel file
    - Analyse product performance with dual-axis charts!
+
+> **Note:**
+> - `setup.sh` is the recommended way to set up locally. It installs dependencies, runs migrations, and seeds the admin user.
+> - `dev.sh` is optional and only needed if you want to use Docker for local Postgres. If you don't use Docker, you can ignore or remove it.
 
 ## Core Features
 
@@ -94,7 +99,9 @@ The system automatically handles:
 
 ## 🚀 Deployment
 
-### Deploy to Vercel (todo)
+### Deploy to Vercel
+   - Use the same login: `admin` / `admin123`
+   - All features work as in local dev
 
 ## 📱 Screenshots
 
