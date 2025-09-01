@@ -106,13 +106,11 @@ The system automatically handles:
 ## 📱 Screenshots
 
 ### Dashboard Overview
-![Dashboard with dual-axis charts showing inventory and monetary values]
+<img width="1274" height="960" alt="image" src="https://github.com/user-attachments/assets/d991d78b-02ad-4b41-b618-ccf7e142ca04" />
+
 
 ### Multi-Product Comparison  
-![Interactive product selection with adaptive legend layouts]
-
-### Excel Data Processing
-![Real-time Excel file upload and transformation]
+<img width="1284" height="1126" alt="image" src="https://github.com/user-attachments/assets/a2748af9-b18a-43aa-a8a2-0bf7add3bd9d" />
 
 ## 🤝 Contributing
 
